@@ -1,809 +1,939 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#08090b">
-<meta name="description" content="Star Fashion — ملابس رجالي وشبابي | خليك Star">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Star Fashion | خليك Star</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Star Fashion — خليك Star.">
+<title>STAR FASHION — خليك Star</title>
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800;900&display=swap');
+
 :root{
-  --bg:#08090b;
-  --card:#111318;
-  --card2:#15171c;
-  --line:#272b33;
-  --text:#f7f7f5;
-  --muted:#9da2ad;
-  --accent:#d9ff3f;
-  --accent-dark:#9fbd18;
+  --black:#070707;
+  --white:#f5f5f2;
+  --gray:#888;
+  --line:rgba(255,255,255,.12);
+  --lime:#dfff38;
 }
+
 *{
+  margin:0;
+  padding:0;
   box-sizing:border-box;
-  -webkit-tap-highlight-color:transparent;
 }
+
 html{
   scroll-behavior:smooth;
 }
+
 body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "SF Pro Text",
-    "Segoe UI",
-    Arial,
-    sans-serif;
+  background:var(--black);
+  color:var(--white);
+  font-family:Cairo,Arial,sans-serif;
+  overflow-x:hidden;
 }
+
 a{
   text-decoration:none;
   color:inherit;
 }
-button,
-a{
-  touch-action:manipulation;
-}
-.wrap{
-  width:100%;
-  max-width:560px;
-  margin:auto;
-  padding:0 18px;
-}
-/* =========================
-   TOP BAR
-========================= */
-.top{
-  position:sticky;
-  top:0;
-  z-index:50;
-  background:rgba(8,9,11,.78);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
+
+/* NAV */
+
 .nav{
-  height:64px;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  height:76px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  padding:0 6vw;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.75),
+    transparent
+  );
+  backdrop-filter:blur(4px);
 }
-.brand{
-  font-size:18px;
-  font-weight:950;
-  letter-spacing:1.5px;
+
+.logo{
+  direction:ltr;
+  font-family:Montserrat,sans-serif;
+  font-weight:900;
+  font-size:15px;
+  letter-spacing:.18em;
 }
-.brand-star{
-  color:var(--accent);
-  margin-left:5px;
-}
-.nav-tag{
-  color:var(--muted);
+
+.nav-link{
+  font-family:Montserrat,sans-serif;
   font-size:10px;
-  letter-spacing:1.5px;
-  font-weight:700;
+  letter-spacing:.15em;
+  direction:ltr;
+  color:#aaa;
 }
-/* =========================
-   HERO
-========================= */
+
+/* HERO */
+
 .hero{
-  padding:18px 0 10px;
-}
-.hero-card{
+  min-height:100svh;
   position:relative;
-  overflow:hidden;
-  min-height:610px;
-  border-radius:32px;
-  border:1px solid #292d35;
-  background:
-    radial-gradient(
-      circle at 78% 15%,
-      rgba(217,255,63,.22),
-      transparent 27%
-    ),
-    radial-gradient(
-      circle at 15% 75%,
-      rgba(255,255,255,.045),
-      transparent 30%
-    ),
-    linear-gradient(
-      145deg,
-      #1a1d23 0%,
-      #0b0c0f 60%,
-      #12151a 100%
-    );
-}
-/* large decorative circle */
-.hero-card::before{
-  content:"";
-  position:absolute;
-  width:310px;
-  height:310px;
-  border:1px solid rgba(217,255,63,.13);
-  border-radius:50%;
-  left:-135px;
-  top:65px;
-}
-.hero-card::after{
-  content:"★";
-  position:absolute;
-  left:-35px;
-  top:40px;
-  font-size:250px;
-  line-height:1;
-  color:rgba(255,255,255,.025);
-  transform:rotate(-12deg);
-}
-.hero-inner{
-  position:relative;
-  z-index:2;
-  min-height:610px;
-  padding:32px 25px 28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-}
-.kicker{
-  color:var(--accent);
-  font-size:10px;
-  letter-spacing:3px;
-  font-weight:900;
-  margin-bottom:16px;
-}
-.hero h1{
-  margin:0;
-  font-size:66px;
-  line-height:.86;
-  letter-spacing:-4px;
-  font-weight:1000;
-}
-.hero h1 span{
-  color:var(--accent);
-}
-.hero-description{
-  margin:20px 0 24px;
-  max-width:390px;
-  color:#c5c8cf;
-  font-size:15px;
-  line-height:1.85;
-}
-.hero-description strong{
-  color:#fff;
-}
-/* =========================
-   MAIN BUTTONS
-========================= */
-.main-actions{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:10px;
-}
-.main-btn{
-  min-height:54px;
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  font-size:15px;
-  font-weight:900;
-  border:1px solid #343943;
-  transition:.2s ease;
-}
-.main-btn:active{
-  transform:scale(.98);
-}
-.main-btn.primary{
-  background:var(--accent);
-  color:#08090b;
-  border-color:var(--accent);
-}
-.main-btn.secondary{
-  background:rgba(255,255,255,.055);
-  color:#fff;
-}
-.btn-icon{
-  font-size:18px;
-}
-/* =========================
-   QUICK LINKS
-========================= */
-section{
-  padding:30px 0;
-}
-.section-title{
-  margin-bottom:14px;
-}
-.section-title h2{
-  margin:0;
-  font-size:25px;
-  letter-spacing:-.5px;
-}
-.section-title p{
-  margin:5px 0 0;
-  color:var(--muted);
-  font-size:12px;
-}
-/* =========================
-   LINK CARDS
-========================= */
-.links{
-  display:grid;
-  gap:10px;
-}
-.link-card{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:13px 15px;
-  border:1px solid var(--line);
-  border-radius:19px;
-  background:linear-gradient(145deg,#121419,#0e1014);
-  transition:.2s ease;
-}
-.link-card:active{
-  transform:scale(.985);
-  border-color:#444a54;
-}
-.link-left{
-  display:flex;
-  align-items:center;
-  gap:13px;
-}
-.link-icon{
-  width:45px;
-  height:45px;
-  border-radius:14px;
-  display:grid;
-  place-items:center;
-  background:#1b1e24;
-  font-size:16px;
-  font-weight:950;
-}
-.link-text b{
-  display:block;
-  font-size:15px;
-}
-.link-text small{
-  display:block;
-  color:var(--muted);
-  font-size:11px;
-  margin-top:4px;
-}
-.link-arrow{
-  color:var(--accent);
-  font-size:23px;
-}
-/* =========================
-   COLLECTION
-========================= */
-.collection{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-.collection-card{
-  position:relative;
-  overflow:hidden;
-  min-height:150px;
-  padding:18px;
-  border:1px solid var(--line);
-  border-radius:22px;
-  background:#12151a;
   display:flex;
   align-items:flex-end;
+  padding:0 7vw 9vh;
+  overflow:hidden;
+  background:
+    radial-gradient(
+      circle at 72% 28%,
+      rgba(223,255,56,.12),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 30% 70%,
+      rgba(255,255,255,.05),
+      transparent 28%
+    ),
+    #080808;
 }
-.collection-card::before{
+
+.hero-image{
+  position:absolute;
+  width:64vw;
+  height:82vh;
+  right:4vw;
+  top:9vh;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 55% 35%,
+      #383838,
+      #151515 45%,
+      #090909 75%
+    );
+  transform:skewX(-7deg);
+  border-left:1px solid rgba(255,255,255,.12);
+}
+
+.hero-image::after{
   content:"";
   position:absolute;
   inset:0;
   background:
-    radial-gradient(
-      circle at 75% 20%,
-      rgba(217,255,63,.18),
-      transparent 30%
-    ),
     linear-gradient(
-      150deg,
-      transparent 20%,
-      rgba(0,0,0,.8) 100%
+      120deg,
+      transparent 35%,
+      rgba(255,255,255,.06),
+      transparent 65%
     );
 }
-.collection-card:nth-child(2)::before{
+
+.hero-outline{
+  position:absolute;
+  left:-5vw;
+  top:25vh;
+  font-family:Montserrat,sans-serif;
+  font-size:clamp(130px,26vw,350px);
+  line-height:.7;
+  font-weight:900;
+  letter-spacing:-.09em;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.08);
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:5;
+  max-width:850px;
+}
+
+.kicker{
+  font-family:Montserrat,sans-serif;
+  direction:ltr;
+  color:var(--lime);
+  font-size:10px;
+  letter-spacing:.3em;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(68px,16vw,165px);
+  line-height:.83;
+  letter-spacing:-.07em;
+  font-weight:900;
+}
+
+.hero h1 span{
+  display:block;
+}
+
+.hero h1 .stroke{
+  color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.85);
+}
+
+.hero-text{
+  max-width:470px;
+  margin-top:30px;
+  color:#aaa;
+  font-size:14px;
+  line-height:2;
+}
+
+.hero-button{
+  margin-top:28px;
+  display:inline-flex;
+  align-items:center;
+  gap:25px;
+  padding:17px 23px;
+  background:var(--white);
+  color:#080808;
+  font-weight:800;
+  transition:.35s;
+}
+
+.hero-button:hover{
+  background:var(--lime);
+  transform:translateY(-4px);
+}
+
+.arrow{
+  direction:ltr;
+  font-size:20px;
+}
+
+/* MARQUEE */
+
+.marquee{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+  white-space:nowrap;
+  padding:18px 0;
+  background:#090909;
+}
+
+.marquee-track{
+  display:inline-block;
+  animation:marquee 28s linear infinite;
+  font-family:Montserrat,sans-serif;
+  font-size:11px;
+  letter-spacing:.25em;
+}
+
+.marquee b{
+  color:var(--lime);
+  margin:0 28px;
+}
+
+@keyframes marquee{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/* SECTION */
+
+.section{
+  padding:120px 7vw;
+}
+
+.eyebrow{
+  direction:ltr;
+  font-family:Montserrat,sans-serif;
+  font-size:10px;
+  color:var(--lime);
+  letter-spacing:.28em;
+}
+
+.section-title{
+  font-size:clamp(48px,8vw,95px);
+  line-height:.9;
+  letter-spacing:-.06em;
+  margin-top:15px;
+  font-weight:900;
+}
+
+.section-intro{
+  max-width:360px;
+  color:#858585;
+  font-size:13px;
+  line-height:2;
+  margin-top:25px;
+}
+
+/* COLLECTIONS */
+
+.collections{
+  margin-top:60px;
+  display:grid;
+  grid-template-columns:1.3fr .8fr .8fr;
+  gap:13px;
+}
+
+.collection{
+  min-height:470px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  padding:28px;
+  background:#151515;
+  transition:.5s;
+}
+
+.collection:nth-child(2){
+  margin-top:80px;
+  min-height:390px;
+}
+
+.collection:nth-child(3){
+  margin-top:160px;
+  min-height:310px;
+}
+
+.collection-bg{
+  position:absolute;
+  inset:0;
+  transition:.7s;
   background:
     radial-gradient(
-      circle at 25% 20%,
+      circle at 60% 25%,
+      rgba(255,255,255,.15),
+      transparent 22%
+    ),
+    linear-gradient(
+      145deg,
+      #2b2b2b,
+      #080808 75%
+    );
+}
+
+.collection:nth-child(2) .collection-bg{
+  background:
+    radial-gradient(
+      circle at 30% 30%,
       rgba(255,255,255,.13),
-      transparent 30%
+      transparent 20%
     ),
     linear-gradient(
-      150deg,
-      transparent 20%,
-      rgba(0,0,0,.82) 100%
+      145deg,
+      #303030,
+      #0a0a0a 75%
     );
 }
-.collection-card:nth-child(3)::before{
+
+.collection:nth-child(3) .collection-bg{
   background:
     radial-gradient(
-      circle at 75% 20%,
-      rgba(100,150,255,.14),
-      transparent 30%
+      circle at 70% 20%,
+      rgba(223,255,56,.08),
+      transparent 22%
     ),
     linear-gradient(
-      150deg,
-      transparent 20%,
-      rgba(0,0,0,.82) 100%
+      145deg,
+      #222,
+      #050505 75%
     );
 }
-.collection-card:nth-child(4)::before{
-  background:
-    radial-gradient(
-      circle at 25% 20%,
-      rgba(255,180,80,.13),
-      transparent 30%
-    ),
-    linear-gradient(
-      150deg,
-      transparent 20%,
-      rgba(0,0,0,.82) 100%
-    );
+
+.collection:hover .collection-bg{
+  transform:scale(1.08);
 }
+
+.collection-number{
+  position:absolute;
+  top:20px;
+  left:20px;
+  color:#777;
+  font-family:Montserrat,sans-serif;
+  font-size:10px;
+}
+
 .collection-content{
   position:relative;
   z-index:2;
 }
-.collection-content b{
-  display:block;
-  font-size:19px;
+
+.collection h3{
+  font-family:Montserrat,sans-serif;
+  direction:ltr;
+  font-size:32px;
+  line-height:.95;
+  letter-spacing:-.05em;
 }
-.collection-content small{
-  color:#aeb3bc;
-  font-size:10px;
-  letter-spacing:1px;
+
+.collection p{
+  color:#999;
+  font-size:11px;
+  margin-top:9px;
 }
-/* =========================
-   BRAND STATEMENT
-========================= */
-.brand-card{
-  position:relative;
-  overflow:hidden;
-  padding:27px 23px;
-  border-radius:25px;
-  border:1px solid var(--line);
-  background:
-    radial-gradient(
-      circle at 90% 0%,
-      rgba(217,255,63,.12),
-      transparent 35%
-    ),
-    #101217;
-}
-.brand-card::after{
-  content:"STAR";
-  position:absolute;
-  left:-8px;
-  bottom:-35px;
-  font-size:100px;
-  font-weight:1000;
-  letter-spacing:-8px;
-  color:rgba(255,255,255,.025);
-}
-.brand-card-content{
-  position:relative;
-  z-index:2;
-}
-.brand-card .mini{
-  color:var(--accent);
-  font-size:10px;
-  letter-spacing:2px;
-  font-weight:900;
-}
-.brand-card h2{
-  margin:9px 0 8px;
-  font-size:31px;
-  letter-spacing:-1px;
-}
-.brand-card p{
-  margin:0;
-  color:#b8bdc6;
-  line-height:1.9;
-  font-size:13px;
-}
-.brand-card strong{
-  color:#fff;
-}
-/* =========================
-   LOCATION
-========================= */
-.location{
-  padding:22px;
-  border-radius:24px;
-  background:linear-gradient(
-    135deg,
-    #d9ff3f,
-    #a8c71f
-  );
-  color:#08090b;
-}
-.location-title{
-  font-size:19px;
-  font-weight:950;
-}
-.location-info{
-  margin:7px 0 15px;
-  font-size:13px;
-  line-height:1.7;
-}
-.location-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:45px;
-  padding:0 17px;
-  border-radius:13px;
-  background:#08090b;
-  color:#fff;
-  font-size:13px;
-  font-weight:900;
-}
-/* =========================
-   FOOTER
-========================= */
-footer{
-  padding:35px 0 115px;
+
+/* STATEMENT */
+
+.statement{
+  padding:135px 7vw;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
   text-align:center;
-  color:#6f747d;
-  font-size:10px;
 }
-.footer-logo{
-  color:#ededeb;
-  font-size:21px;
-  font-weight:950;
-  letter-spacing:2px;
-  margin-bottom:8px;
+
+.statement h2{
+  font-size:clamp(40px,7vw,90px);
+  line-height:1;
+  letter-spacing:-.06em;
+  font-weight:900;
 }
-.footer-star{
-  color:var(--accent);
+
+.statement .outline{
+  color:transparent;
+  -webkit-text-stroke:1px #777;
 }
-/* =========================
-   BOTTOM NAV
-========================= */
-.bottom{
-  position:fixed;
-  bottom:0;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:100;
-  width:min(560px,100%);
-  padding:
-    9px
-    12px
-    calc(9px + env(safe-area-inset-bottom));
-  background:rgba(8,9,11,.91);
-  backdrop-filter:blur(22px);
-  -webkit-backdrop-filter:blur(22px);
-  border-top:1px solid rgba(255,255,255,.08);
+
+/* LINKS */
+
+.links{
+  margin-top:55px;
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:7px;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
 }
-.bottom a{
-  min-height:46px;
-  border-radius:13px;
+
+.link{
+  min-height:145px;
+  padding:27px;
+  border:1px solid var(--line);
+  background:#0e0e0e;
   display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  color:#9da2ad;
-  font-size:10px;
-  font-weight:700;
+  align-items:flex-end;
+  justify-content:space-between;
+  transition:.35s;
 }
-.bottom a b{
-  color:#fff;
-  font-size:15px;
-  margin-bottom:2px;
+
+.link:hover{
+  background:#171717;
+  border-color:#444;
+  transform:translateY(-4px);
 }
-.bottom a.hot{
-  background:var(--accent);
-  color:#08090b;
+
+.link small{
+  direction:ltr;
+  display:block;
+  color:#666;
+  font-family:Montserrat,sans-serif;
+  font-size:9px;
+  letter-spacing:.2em;
+  margin-bottom:6px;
 }
-.bottom a.hot b{
-  color:#08090b;
+
+.link h3{
+  font-size:24px;
 }
-/* =========================
-   DESKTOP
-========================= */
-@media(min-width:561px){
-  body{
-    background:#030405;
+
+.link-arrow{
+  direction:ltr;
+  font-size:27px;
+}
+
+/* FOOTER */
+
+.footer{
+  padding:90px 7vw 30px;
+  background:#050505;
+}
+
+.footer-top{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-logo{
+  direction:ltr;
+  font-family:Montserrat,sans-serif;
+  font-size:clamp(60px,13vw,160px);
+  line-height:.75;
+  font-weight:900;
+  letter-spacing:-.09em;
+}
+
+.footer-info{
+  max-width:260px;
+  color:#666;
+  font-size:11px;
+  line-height:2;
+}
+
+.footer-bottom{
+  margin-top:85px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  color:#555;
+  font-family:Montserrat,sans-serif;
+  direction:ltr;
+  font-size:9px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .nav{
+    height:65px;
+    padding:0 5vw;
   }
-  .wrap{
-    background:var(--bg);
-    min-height:100vh;
+
+  .logo{
+    font-size:12px;
   }
-}
-/* =========================
-   SMALL PHONES
-========================= */
-@media(max-width:360px){
+
+  .nav-link{
+    font-size:8px;
+  }
+
+  .hero{
+    padding:0 7vw 8vh;
+  }
+
+  .hero-image{
+    width:88vw;
+    height:61vh;
+    right:-15vw;
+    top:17vh;
+  }
+
+  .hero-outline{
+    top:27vh;
+    font-size:48vw;
+  }
+
   .hero h1{
-    font-size:56px;
+    font-size:clamp(72px,21vw,120px);
   }
-  .hero-card,
-  .hero-inner{
-    min-height:570px;
+
+  .hero-text{
+    font-size:13px;
+    max-width:330px;
   }
-  .hero-inner{
-    padding:27px 20px;
+
+  .section{
+    padding:90px 7vw;
   }
-  .wrap{
-    padding-left:14px;
-    padding-right:14px;
+
+  .collections{
+    display:block;
+    margin-top:45px;
+  }
+
+  .collection,
+  .collection:nth-child(2),
+  .collection:nth-child(3){
+    margin:0 0 12px;
+    min-height:340px;
+  }
+
+  .collection:nth-child(2){
+    min-height:300px;
+  }
+
+  .collection:nth-child(3){
+    min-height:260px;
+  }
+
+  .links{
+    display:block;
+    margin-top:40px;
+  }
+
+  .link{
+    margin-bottom:12px;
+    min-height:125px;
+  }
+
+  .footer-top{
+    display:block;
+  }
+
+  .footer-info{
+    margin-top:40px;
+  }
+
+  .footer-bottom{
+    margin-top:60px;
+    gap:20px;
   }
 }
 </style>
 </head>
+
 <body>
-<!-- =========================
-     HEADER
-========================= -->
-<header class="top">
-  <div class="wrap nav">
-    <div class="brand">
-      <span class="brand-star">★</span>
-      STAR FASHION
-    </div>
-    <div class="nav-tag">
-      MEN'S WEAR
-    </div>
-  </div>
-</header>
-<main class="wrap">
-<!-- =========================
-     HERO
-========================= -->
-<section class="hero" id="home">
-  <div class="hero-card">
-    <div class="hero-inner">
-      <div class="kicker">
-        STAR FASHION / 2026
-      </div>
-      <h1>
-        خليك<br>
-        <span>Star.</span>
-      </h1>
-      <p class="hero-description">
-        ملابس رجالي وشبابي بتشكيلات عصرية.
-        <br>
-        <strong>اختار اللوك اللي شبهك.</strong>
-      </p>
-      <div class="main-actions">
-        <a
-          class="main-btn primary"
-          href="https://t.me/STARFASHI6542"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="btn-icon">✦</span>
-          شوف التشكيلة
-        </a>
-        <a
-          class="main-btn secondary"
-          href="https://wa.me/201015804519?text=مرحباً%20Star%20Fashion%20عايز%20أشوف%20التشكيلات"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="btn-icon">WA</span>
-          تواصل على واتساب
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- =========================
-     QUICK LINKS
-========================= -->
-<section>
-  <div class="section-title">
-    <h2>Star Fashion</h2>
-    <p>كل اللي محتاجه في مكان واحد</p>
-  </div>
-  <div class="links">
-    <a
-      class="link-card"
-      href="https://t.me/STARFASHI6542"
-      target="_blank"
-      rel="noopener"
-    >
-      <div class="link-left">
-        <div class="link-icon">
-          TG
-        </div>
-        <div class="link-text">
-          <b>التشكيلة كاملة</b>
-          <small>موديلات • ألوان • مقاسات • أسعار</small>
-        </div>
-      </div>
-      <div class="link-arrow">‹</div>
-    </a>
-    <a
-      class="link-card"
-      href="https://wa.me/201015804519?text=مرحباً%20Star%20Fashion"
-      target="_blank"
-      rel="noopener"
-    >
-      <div class="link-left">
-        <div class="link-icon">
-          WA
-        </div>
-        <div class="link-text">
-          <b>واتساب</b>
-          <small>للطلب والاستفسار</small>
-        </div>
-      </div>
-      <div class="link-arrow">‹</div>
-    </a>
-    <a
-      class="link-card"
-      href="https://www.google.com/maps/search/?api=1&query=Star+Fashion+Mall+Sednawy+El+Ataba"
-      target="_blank"
-      rel="noopener"
-    >
-      <div class="link-left">
-        <div class="link-icon">
-          📍
-        </div>
-        <div class="link-text">
-          <b>مكاننا</b>
-          <small>مول صيدناوي العتبة • الدور الثاني • مكتب 25</small>
-        </div>
-      </div>
-      <div class="link-arrow">‹</div>
-    </a>
-  </div>
-</section>
-<!-- =========================
-     COLLECTION
-========================= -->
-<section id="categories">
-  <div class="section-title">
-    <h2>اختار اللي يناسبك</h2>
-    <p>أحدث تشكيلات Star Fashion</p>
-  </div>
-  <div class="collection">
-    <a
-      class="collection-card"
-      href="https://t.me/STARFASHI6542"
-      target="_blank"
-      rel="noopener"
-    >
-      <div class="collection-content">
-        <b>ترنجات</b>
-        <small>TRACKSUITS</small>
-      </div>
-    </a>
-    <a
-      class="collection-card"
-      href="https://t.me/STARFASHI6542"
-      target="_blank"
-      rel="noopener"
-    >
-      <div class="collection-content">
-        <b>تيشيرتات</b>
-        <small>T-SHIRTS</small>
-      </div>
-    </a>
-    <a
-      class="collection-card"
-      href="https://t.me/STARFASHI6542"
-      target="_blank"
-      rel="noopener"
-    >
-      <div class="collection-content">
-        <b>بناطيل</b>
-        <small>PANTS</small>
-      </div>
-    </a>
-    <a
-      class="collection-card"
-      href="https://t.me/STARFASHI6542"
-      target="_blank"
-      rel="noopener"
-    >
-      <div class="collection-content">
-        <b>محير</b>
-        <small>YOUTH</small>
-      </div>
-    </a>
-  </div>
-</section>
-<!-- =========================
-     BRAND
-========================= -->
-<section>
-  <div class="brand-card">
-    <div class="brand-card-content">
-      <div class="mini">
-        ABOUT STAR FASHION
-      </div>
-      <h2>
-        خليك Star.
-      </h2>
-      <p>
-        Star Fashion ملابس رجالي وشبابي
-        بتصميمات عصرية وتشكيلات متجددة.
-        <br><br>
-        <strong>
-          مش بنقولك تلبس إيه...
-          إحنا بنخليك تختار اللوك اللي شبهك.
-        </strong>
-      </p>
-    </div>
-  </div>
-</section>
-<!-- =========================
-     LOCATION
-========================= -->
-<section id="contact">
-  <div class="section-title">
-    <h2>تعالى عندنا</h2>
-    <p>زورنا وشوف التشكيلة على الطبيعة</p>
-  </div>
-  <div class="location">
-    <div class="location-title">
-      📍 Star Fashion
-    </div>
-    <div class="location-info">
-      مول صيدناوي العتبة
-      <br>
-      الدور الثاني • مكتب 25
-    </div>
-    <a
-      class="location-btn"
-      href="https://www.google.com/maps/search/?api=1&query=Star+Fashion+Mall+Sednawy+El+Ataba"
-      target="_blank"
-      rel="noopener"
-    >
-      افتح اللوكيشن
-    </a>
-  </div>
-</section>
-<!-- =========================
-     FOOTER
-========================= -->
-<footer>
-  <div class="footer-logo">
-    <span class="footer-star">★</span>
-    STAR FASHION
-  </div>
-  خليك Star • MEN'S WEAR
-</footer>
-</main>
-<!-- =========================
-     BOTTOM NAV
-========================= -->
-<nav class="bottom">
-  <a href="#home">
-    <b>⌂</b>
-    الرئيسية
-  </a>
-  <a href="#categories">
-    <b>✦</b>
-    التشكيلة
-  </a>
-  <a
-    class="hot"
-    href="https://wa.me/201015804519?text=مرحباً%20Star%20Fashion"
-    target="_blank"
-    rel="noopener"
-  >
-    <b>WA</b>
-    واتساب
-  </a>
+
+<nav class="nav">
+  <a href="#" class="logo">STAR FASHION</a>
+  <a href="#contact" class="nav-link">CONTACT ↗</a>
 </nav>
+
+<section class="hero">
+
+  <div class="hero-image"></div>
+
+  <div class="hero-outline">STAR</div>
+
+  <div class="hero-content">
+
+    <div class="kicker">
+      MEN'S FASHION — EGYPT
+    </div>
+
+    <h1>
+      <span>خليك</span>
+      <span class="stroke">Star.</span>
+    </h1>
+
+    <p class="hero-text">
+      ستايل رجالي عصري، قطع مختارة، وحضور مختلف.
+      اكتشف عالم Star Fashion وتواصل معنا مباشرة.
+    </p>
+
+    <a href="#collections" class="hero-button">
+      اكتشف Star Fashion
+      <span class="arrow">←</span>
+    </a>
+
+  </div>
+
+</section>
+
+
+<div class="marquee">
+
+  <div class="marquee-track">
+
+    STAR FASHION
+    <b>✦</b>
+    MEN'S STYLE
+    <b>✦</b>
+    STREETWEAR
+    <b>✦</b>
+    ESSENTIALS
+    <b>✦</b>
+
+    STAR FASHION
+    <b>✦</b>
+    MEN'S STYLE
+    <b>✦</b>
+    STREETWEAR
+    <b>✦</b>
+    ESSENTIALS
+    <b>✦</b>
+
+  </div>
+
+</div>
+
+
+<section class="section" id="collections">
+
+  <div class="eyebrow">
+    01 / THE EDIT
+  </div>
+
+  <h2 class="section-title">
+    اختار<br>
+    طريقتك.
+  </h2>
+
+  <p class="section-intro">
+    من القطع اليومية إلى الـStreetwear،
+    Star Fashion للرجل اللي عايز يظهر بطريقته.
+  </p>
+
+
+  <div class="collections">
+
+    <a
+      href="https://t.me/STARFASHI6542"
+      target="_blank"
+      class="collection"
+    >
+
+      <div class="collection-bg"></div>
+
+      <span class="collection-number">
+        01
+      </span>
+
+      <div class="collection-content">
+
+        <h3>
+          STREET<br>
+          WEAR
+        </h3>
+
+        <p>
+          Telegram Collection ↗
+        </p>
+
+      </div>
+
+    </a>
+
+
+    <a
+      href="https://wa.me/201015804519"
+      target="_blank"
+      class="collection"
+    >
+
+      <div class="collection-bg"></div>
+
+      <span class="collection-number">
+        02
+      </span>
+
+      <div class="collection-content">
+
+        <h3>
+          NEW<br>
+          DROPS
+        </h3>
+
+        <p>
+          WhatsApp ↗
+        </p>
+
+      </div>
+
+    </a>
+
+
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Star+Fashion+Mall+Sednawy+El+Ataba"
+      target="_blank"
+      class="collection"
+    >
+
+      <div class="collection-bg"></div>
+
+      <span class="collection-number">
+        03
+      </span>
+
+      <div class="collection-content">
+
+        <h3>
+          VISIT<br>
+          US
+        </h3>
+
+        <p>
+          El Ataba — Cairo ↗
+        </p>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="statement">
+
+  <h2>
+    مش مجرد لبس.
+    <br>
+    <span class="outline">
+      دي طريقتك.
+    </span>
+  </h2>
+
+</section>
+
+
+<section class="section" id="contact">
+
+  <div class="eyebrow">
+    02 / CONNECT
+  </div>
+
+  <h2 class="section-title">
+    ابقى<br>
+    قريب.
+  </h2>
+
+  <p class="section-intro">
+    كل الجديد، الموديلات والأسعار والتواصل
+    مع Star Fashion من مكان واحد.
+  </p>
+
+
+  <div class="links">
+
+    <a
+      class="link"
+      href="https://t.me/STARFASHI6542"
+      target="_blank"
+    >
+
+      <div>
+        <small>CHANNEL</small>
+        <h3>Telegram</h3>
+      </div>
+
+      <span class="link-arrow">↗</span>
+
+    </a>
+
+
+    <a
+      class="link"
+      href="https://wa.me/201015804519"
+      target="_blank"
+    >
+
+      <div>
+        <small>DIRECT</small>
+        <h3>WhatsApp</h3>
+      </div>
+
+      <span class="link-arrow">↗</span>
+
+    </a>
+
+
+    <a
+      class="link"
+      href="https://www.google.com/maps/search/?api=1&query=Star+Fashion+Mall+Sednawy+El+Ataba"
+      target="_blank"
+    >
+
+      <div>
+        <small>LOCATION</small>
+        <h3>موقعنا</h3>
+      </div>
+
+      <span class="link-arrow">↗</span>
+
+    </a>
+
+
+    <a
+      class="link"
+      href="https://t.me/STARFASHI6542"
+      target="_blank"
+    >
+
+      <div>
+        <small>DISCOVER</small>
+        <h3>آخر الموديلات</h3>
+      </div>
+
+      <span class="link-arrow">↗</span>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <div class="footer-logo">
+      STAR
+    </div>
+
+    <div class="footer-info">
+      STAR FASHION<br>
+      Mall Sednawy — El Ataba, Cairo
+      <br><br>
+      خليك Star.
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      STAR FASHION © 2026
+    </span>
+
+    <span>
+      MEN'S FASHION / EGYPT
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const elements =
+document.querySelectorAll(
+  '.collection,.link,.statement h2,.section-title,.section-intro'
+);
+
+const observer =
+new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.style.opacity = '1';
+
+        entry.target.style.transform =
+          'translateY(0)';
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+  {
+    threshold:.08
+  }
+);
+
+
+elements.forEach(element => {
+
+  element.style.opacity = '0';
+
+  element.style.transform =
+    'translateY(30px)';
+
+  element.style.transition =
+    'opacity .8s ease, transform .8s ease';
+
+  observer.observe(element);
+
+});
+
+</script>
+
 </body>
 </html>
