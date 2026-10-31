@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://5j4msvrsgw-bit.github.io/-Star-Fashion/sitemap.xml
