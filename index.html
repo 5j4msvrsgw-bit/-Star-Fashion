@@ -3,12 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star Fashion | خليك Star</title>
-  <meta
-    name="description"
-    content="Star Fashion - ملابس رجالي وشبابي. تابع أحدث الموديلات وتواصل معنا مباشرة."
-  >
+
+  <title>ستار فاشون | ملابس رجالي وترينجات ومحير في العتبة</title>
+
+  <link rel="canonical"
+  href="https://5j4msvrsgw-bit.github.io/-Star-Fashion/">
+
+  <meta name="robots"
+  content="index, follow, max-image-preview:large">
+
+  <meta name="description"
+  content="ستار فاشون للملابس الرجالي والترينجات والمحير. بيع جملة وقطاعي من القطعة في مول صيدناوي، العتبة، الدور الثاني، مكتب 25. تواصل معنا لمعرفة الموديلات والمقاسات.">
+
   <meta name="theme-color" content="#080808">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:site_name" content="Star Fashion">
+
+  <meta property="og:title"
+  content="ستار فاشون | ملابس رجالي وترينجات ومحير">
+
+  <meta property="og:description"
+  content="ملابس رجالي وترينجات ومحير. بيع جملة وقطاعي من القطعة في مول صيدناوي، العتبة.">
+
+  <meta property="og:url"
+  content="https://5j4msvrsgw-bit.github.io/-Star-Fashion/">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- بيانات النشاط لمحركات البحث والذكاء الاصطناعي -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "ستار فاشون للملابس الرجالي",
+    "alternateName": "Star Fashion",
+    "url": "https://5j4msvrsgw-bit.github.io/-Star-Fashion/",
+    "description": "مكتب متخصص في بيع الملابس الرجالي والترينجات والمحير، جملة وقطاعي من القطعة.",
+    "telephone": "+201015804519",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "مول صيدناوي، العتبة، الدور الثاني، مكتب 25",
+      "addressLocality": "القاهرة",
+      "addressRegion": "القاهرة",
+      "addressCountry": "EG"
+    },
+    "hasMap": "https://share.google/VpkhCOX70dayW75qu",
+    "sameAs": [
+      "https://t.me/STARFASHI6542",
+      "https://www.facebook.com/share/1D2sK4tKBd/",
+      "https://www.tiktok.com/@ahmed_abaza010"
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --black: #080808;
@@ -18,14 +67,17 @@
       --orange: #f05a20;
       --border: rgba(255,255,255,0.10);
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     html {
       scroll-behavior: smooth;
     }
+
     body {
       font-family:
         -apple-system,
@@ -36,20 +88,20 @@
         sans-serif;
       background: var(--black);
       color: var(--white);
-      line-height: 1.7;
+      line-height: 1.8;
       overflow-x: hidden;
     }
+
     a {
       color: inherit;
       text-decoration: none;
     }
+
     img {
       display: block;
       width: 100%;
     }
-    /* =========================
-       HEADER
-    ========================== */
+
     header {
       position: sticky;
       top: 0;
@@ -59,6 +111,7 @@
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
+
     .header-inner {
       width: min(1100px, calc(100% - 32px));
       margin: auto;
@@ -68,45 +121,47 @@
       justify-content: space-between;
       gap: 20px;
     }
+
     .brand {
       font-size: 21px;
       font-weight: 900;
       letter-spacing: 1.5px;
       white-space: nowrap;
     }
+
     .brand span {
       color: var(--orange);
     }
+
     .header-slogan {
       color: var(--gray);
       font-size: 13px;
       font-weight: 600;
     }
-    /* =========================
-       MAIN
-    ========================== */
+
     main {
       width: min(1100px, calc(100% - 32px));
       margin: auto;
     }
-    /* =========================
-       HERO
-    ========================== */
+
     .hero {
       padding: 24px 0 0;
     }
+
     .hero-image {
       position: relative;
       overflow: hidden;
       border-radius: 24px;
       background: #151515;
     }
+
     .hero-image img {
       width: 100%;
       height: auto;
       max-height: 650px;
       object-fit: cover;
     }
+
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -117,6 +172,7 @@
           rgba(0,0,0,0.04) 65%
         );
     }
+
     .hero-content {
       position: absolute;
       right: 28px;
@@ -124,30 +180,32 @@
       left: 28px;
       max-width: 620px;
     }
+
     .hero-content h1 {
       font-size: clamp(42px, 8vw, 82px);
-      line-height: 0.95;
+      line-height: 1.1;
       font-weight: 950;
       letter-spacing: -2px;
       margin-bottom: 16px;
     }
+
     .hero-content h1 span {
       color: var(--orange);
     }
+
     .hero-content p {
       color: #eeeeee;
       font-size: 16px;
       max-width: 550px;
       margin-bottom: 22px;
     }
-    /* =========================
-       BUTTONS
-    ========================== */
+
     .buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .btn {
       min-height: 48px;
       padding: 0 20px;
@@ -157,78 +215,80 @@
       justify-content: center;
       font-size: 14px;
       font-weight: 800;
-      transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+      transition: transform 0.2s ease;
     }
+
     .btn:hover {
       transform: translateY(-2px);
-      opacity: 0.92;
     }
+
     .btn-primary {
       background: var(--orange);
       color: white;
     }
+
     .btn-secondary {
       background: white;
       color: black;
     }
-    /* =========================
-       INTRO
-    ========================== */
+
     .intro {
       padding: 55px 0 30px;
       text-align: center;
     }
+
     .intro h2 {
       font-size: clamp(28px, 5vw, 44px);
       font-weight: 900;
       margin-bottom: 10px;
     }
+
     .intro h2 span {
       color: var(--orange);
     }
+
     .intro p {
       color: var(--gray);
-      max-width: 650px;
+      max-width: 750px;
       margin: auto;
       font-size: 15px;
     }
-    /* =========================
-       SECOND IMAGE
-    ========================== */
+
     .second-image {
       overflow: hidden;
       border-radius: 24px;
       background: #151515;
       margin-top: 15px;
     }
+
     .second-image img {
       width: 100%;
       height: auto;
       object-fit: cover;
     }
-    /* =========================
-       SOCIAL
-    ========================== */
+
     .section-title {
       text-align: center;
       margin: 60px 0 22px;
     }
+
     .section-title h2 {
       font-size: 28px;
       font-weight: 900;
     }
+
     .section-title p {
       color: var(--gray);
       font-size: 14px;
       margin-top: 5px;
     }
+
     .social-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
+
     .social-card {
       min-height: 88px;
       background: var(--black-2);
@@ -240,19 +300,20 @@
       padding: 18px 20px;
       transition:
         transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
+        border-color 0.2s ease;
     }
+
     .social-card:hover {
       transform: translateY(-3px);
       border-color: rgba(240,90,32,0.5);
-      background: #161616;
     }
+
     .social-info {
       display: flex;
       align-items: center;
       gap: 13px;
     }
+
     .social-icon {
       width: 42px;
       height: 42px;
@@ -265,10 +326,12 @@
       font-size: 15px;
       font-weight: 900;
     }
+
     .social-name {
       font-size: 15px;
       font-weight: 800;
     }
+
     .social-handle {
       display: block;
       color: var(--gray);
@@ -277,21 +340,15 @@
       text-align: right;
       margin-top: 2px;
     }
+
     .arrow {
       color: var(--orange);
       font-size: 20px;
     }
-    /* =========================
-       LOCATION
-    ========================== */
+
     .location-card {
       margin-top: 14px;
-      background:
-        linear-gradient(
-          135deg,
-          #151515,
-          #0d0d0d
-        );
+      background: linear-gradient(135deg, #151515, #0d0d0d);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 24px;
@@ -300,14 +357,17 @@
       justify-content: space-between;
       gap: 20px;
     }
+
     .location-content h3 {
       font-size: 18px;
       margin-bottom: 5px;
     }
+
     .location-content p {
       color: var(--gray);
       font-size: 14px;
     }
+
     .location-button {
       flex-shrink: 0;
       background: white;
@@ -321,9 +381,76 @@
       font-size: 13px;
       font-weight: 800;
     }
-    /* =========================
-       FOOTER
-    ========================== */
+
+    /* معلومات النشاط */
+    .business-info {
+      padding: 45px 0 20px;
+      text-align: center;
+    }
+
+    .business-info h2 {
+      font-size: clamp(25px, 5vw, 38px);
+      margin-bottom: 15px;
+      font-weight: 900;
+    }
+
+    .business-info h2 span {
+      color: var(--orange);
+    }
+
+    .business-info p {
+      color: #c4c4c4;
+      max-width: 800px;
+      margin: 0 auto 15px;
+      font-size: 15px;
+    }
+
+    .business-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .business-point {
+      background: var(--black-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 12px;
+      font-weight: 800;
+    }
+
+    .business-point span {
+      display: block;
+      color: var(--orange);
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    /* الأسئلة الشائعة */
+    .faq {
+      margin-top: 55px;
+    }
+
+    .faq-item {
+      background: var(--black-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 12px;
+    }
+
+    .faq-item h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .faq-item p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
     footer {
       width: min(1100px, calc(100% - 32px));
       margin: 70px auto 0;
@@ -333,116 +460,154 @@
       color: #777;
       font-size: 12px;
     }
+
     footer strong {
       color: white;
     }
-    /* =========================
-       MOBILE
-    ========================== */
+
     @media (max-width: 650px) {
       .header-inner {
         min-height: 60px;
       }
+
       .brand {
         font-size: 18px;
       }
+
       .header-slogan {
         font-size: 11px;
       }
+
       main {
         width: min(100% - 20px, 1100px);
       }
+
       .hero {
         padding-top: 10px;
       }
+
       .hero-image {
         border-radius: 18px;
       }
+
       .hero-content {
         right: 18px;
         bottom: 18px;
         left: 18px;
       }
+
       .hero-content h1 {
         font-size: 48px;
         letter-spacing: -1.5px;
       }
+
       .hero-content p {
         font-size: 13px;
         line-height: 1.6;
         margin-bottom: 15px;
       }
+
       .buttons {
         width: 100%;
       }
+
       .btn {
         flex: 1;
         min-width: 130px;
         padding: 0 14px;
         font-size: 13px;
       }
+
       .intro {
         padding: 42px 0 22px;
       }
+
       .intro h2 {
         font-size: 29px;
       }
+
       .intro p {
         font-size: 13px;
         line-height: 1.8;
       }
+
       .second-image {
         border-radius: 18px;
       }
+
       .section-title {
         margin-top: 45px;
       }
+
       .social-grid {
         grid-template-columns: 1fr;
       }
+
       .social-card {
         min-height: 76px;
       }
+
       .location-card {
         align-items: flex-start;
         flex-direction: column;
       }
+
       .location-button {
         width: 100%;
+      }
+
+      .business-points {
+        grid-template-columns: 1fr;
+      }
+
+      .business-info p {
+        font-size: 13px;
       }
     }
   </style>
 </head>
+
 <body>
+
   <!-- HEADER -->
   <header>
     <div class="header-inner">
       <div class="brand">
         STAR <span>FASHION</span>
       </div>
+
       <div class="header-slogan">
         خليك Star.
       </div>
     </div>
   </header>
+
   <main>
+
     <!-- HERO -->
     <section class="hero">
       <div class="hero-image">
+
         <img
           src="./%20%20%20%20%20%20%20%20IMG_0920.jpeg.JPG"
-          alt="Star Fashion"
+          alt="ستار فاشون للملابس الرجالي والترينجات في العتبة"
+          fetchpriority="high"
         >
+
         <div class="hero-overlay"></div>
+
         <div class="hero-content">
           <h1>
             خليك <span>Star.</span>
           </h1>
+
           <p>
             اكتشف اختيارات Star Fashion الجديدة،
             وشوف الموديلات وتواصل معانا مباشرة.
           </p>
+
           <div class="buttons">
+
             <a
               class="btn btn-primary"
               href="https://t.me/STARFASHI6542"
@@ -451,6 +616,7 @@
             >
               Telegram
             </a>
+
             <a
               class="btn btn-secondary"
               href="https://wa.me/201015804519"
@@ -459,38 +625,138 @@
             >
               WhatsApp
             </a>
+
           </div>
         </div>
       </div>
     </section>
+
     <!-- INTRO -->
     <section class="intro">
       <h2>
         <span>Star</span> Fashion
       </h2>
+
       <p>
-        اختيارات رجالي وشبابي بطابع عصري.
-        تابعنا وشوف الجديد وتواصل معانا بسهولة.
+        ستار فاشون مكتب متخصص في بيع الملابس الرجالي
+        والترينجات والمحير، ويوفر اختيارات متنوعة
+        للتجار والمستهلكين.
       </p>
     </section>
+
+    <!-- SEARCH ENGINE BUSINESS INFORMATION -->
+    <section class="business-info">
+
+      <h2>
+        ملابس رجالي وترينجات في <span>العتبة</span>
+      </h2>
+
+      <p>
+        ستار فاشون للملابس الرجالي مكتب متخصص في
+        بيع الملابس الرجالي والترينجات وملابس المحير.
+        نوفر البيع جملة وقطاعي من القطعة، بما يناسب
+        تجار الملابس وأصحاب المحلات والمستهلكين.
+      </p>
+
+      <p>
+        يمكن التواصل مع ستار فاشون للاستفسار عن
+        الموديلات المتاحة والألوان والمقاسات والأسعار
+        وطلبات الحجز.
+      </p>
+
+      <div class="business-points">
+
+        <div class="business-point">
+          <span>القسم الأول</span>
+          ملابس رجالي
+        </div>
+
+        <div class="business-point">
+          <span>القسم الثاني</span>
+          ترينجات رجالي
+        </div>
+
+        <div class="business-point">
+          <span>القسم الثالث</span>
+          ملابس محير
+        </div>
+
+      </div>
+
+    </section>
+
     <!-- SECOND IMAGE -->
     <section class="second-image">
+
       <img
         src="./%20%20%20%20%20%20%20%20IMG_0921.jpeg.JPG"
-        alt="Star Fashion Collection"
+        alt="تشكيلات الملابس الرجالي والترينجات من ستار فاشون"
+        loading="lazy"
       >
+
     </section>
-    <!-- SOCIAL LINKS -->
-    <section>
+
+    <!-- FAQ -->
+    <section class="faq">
+
       <div class="section-title">
-        <h2>
-          تواصل معانا
-        </h2>
+        <h2>أسئلة شائعة</h2>
+        <p>معلومات عن البيع والتواصل وزيارة المكتب</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>أين يقع مكتب ستار فاشون؟</h3>
         <p>
-          اختار الطريقة المناسبة ليك
+          يقع مكتب ستار فاشون في مول صيدناوي بالعتبة،
+          الدور الثاني، مكتب رقم 25.
         </p>
       </div>
+
+      <div class="faq-item">
+        <h3>هل يوجد بيع جملة وقطاعي؟</h3>
+        <p>
+          نعم، يوفر ستار فاشون البيع جملة وقطاعي
+          من القطعة.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>ما أنواع الملابس المتوفرة؟</h3>
+        <p>
+          يتخصص المكتب في الملابس الرجالي والترينجات
+          وملابس المحير.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>كيف يمكن معرفة الموديلات والأسعار؟</h3>
+        <p>
+          يمكن التواصل مع المكتب عبر واتساب أو متابعة
+          قناة تليجرام لمعرفة الموديلات والمقاسات
+          والألوان والأسعار المتاحة.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>كيف أتواصل مع ستار فاشون؟</h3>
+        <p>
+          يمكنك التواصل عبر واتساب على الرقم
+          01015804519 أو من خلال قنوات التواصل الرسمية.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- SOCIAL LINKS -->
+    <section>
+
+      <div class="section-title">
+        <h2>تواصل معانا</h2>
+        <p>اختار الطريقة المناسبة ليك</p>
+      </div>
+
       <div class="social-grid">
+
         <!-- Telegram -->
         <a
           class="social-card"
@@ -498,23 +764,21 @@
           target="_blank"
           rel="noopener"
         >
+
           <div class="social-info">
-            <div class="social-icon">
-              TG
-            </div>
+            <div class="social-icon">TG</div>
+
             <div>
-              <div class="social-name">
-                Telegram
-              </div>
+              <div class="social-name">Telegram</div>
               <span class="social-handle">
                 @STARFASHI6542
               </span>
             </div>
           </div>
-          <div class="arrow">
-            ←
-          </div>
+
+          <div class="arrow">←</div>
         </a>
+
         <!-- WhatsApp -->
         <a
           class="social-card"
@@ -522,23 +786,21 @@
           target="_blank"
           rel="noopener"
         >
+
           <div class="social-info">
-            <div class="social-icon">
-              WA
-            </div>
+            <div class="social-icon">WA</div>
+
             <div>
-              <div class="social-name">
-                WhatsApp
-              </div>
+              <div class="social-name">WhatsApp</div>
               <span class="social-handle">
                 01015804519
               </span>
             </div>
           </div>
-          <div class="arrow">
-            ←
-          </div>
+
+          <div class="arrow">←</div>
         </a>
+
         <!-- TikTok -->
         <a
           class="social-card"
@@ -546,23 +808,21 @@
           target="_blank"
           rel="noopener"
         >
+
           <div class="social-info">
-            <div class="social-icon">
-              TT
-            </div>
+            <div class="social-icon">TT</div>
+
             <div>
-              <div class="social-name">
-                TikTok
-              </div>
+              <div class="social-name">TikTok</div>
               <span class="social-handle">
                 @ahmed_abaza010
               </span>
             </div>
           </div>
-          <div class="arrow">
-            ←
-          </div>
+
+          <div class="arrow">←</div>
         </a>
+
         <!-- Facebook -->
         <a
           class="social-card"
@@ -570,62 +830,88 @@
           target="_blank"
           rel="noopener"
         >
+
           <div class="social-info">
-            <div class="social-icon">
-              f
-            </div>
+            <div class="social-icon">f</div>
+
             <div>
-              <div class="social-name">
-                Facebook
-              </div>
+              <div class="social-name">Facebook</div>
               <span class="social-handle">
                 Star Fashion
               </span>
             </div>
           </div>
-          <div class="arrow">
-            ←
-          </div>
+
+          <div class="arrow">←</div>
         </a>
+
       </div>
     </section>
+
     <!-- LOCATION -->
     <section>
+
       <div class="section-title">
-        <h2>
-          زورنا
-        </h2>
-        <p>
-          Star Fashion — مول صيدناوي العتبة
-        </p>
+        <h2>زورنا</h2>
+        <p>Star Fashion — مول صيدناوي العتبة</p>
       </div>
+
       <div class="location-card">
+
         <div class="location-content">
-          <h3>
-            Star Fashion
-          </h3>
+          <h3>Star Fashion</h3>
+
           <p>
-            مول صيدناوي العتبة — الدور الثاني — مكتب 25
+            مول صيدناوي العتبة
+            — الدور الثاني
+            — مكتب 25
+          </p>
+
+          <p>
+            واتساب: 01015804519
           </p>
         </div>
+
         <a
           class="location-button"
-          href="https://www.google.com/maps/search/?api=1&query=Star+Fashion+Mall+Sednawy+El+Ataba"
+          href="https://share.google/VpkhCOX70dayW75qu"
           target="_blank"
           rel="noopener"
         >
-          فتح الموقع
+          فتح الموقع على Google Maps
         </a>
+
       </div>
     </section>
+
   </main>
+
   <!-- FOOTER -->
   <footer>
+
     <strong>STAR FASHION</strong>
+
     <br>
-    خليك Star.
+
+    ملابس رجالي وترينجات ومحير
+
+    <br>
+
+    بيع جملة وقطاعي من القطعة
+
+    <br>
+
+    مول صيدناوي العتبة — الدور الثاني — مكتب 25
+
     <br><br>
+
+    خليك Star.
+
+    <br><br>
+
     © 2026 Star Fashion. All Rights Reserved.
+
   </footer>
+
 </body>
 </html>
